@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb", 
+    "plugin:prettier/recommended"], 
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "import/prefer-default-export": 0,
+    "import/no-unresolved":[0, "never"],
+    "import/extensions":[0, "never"],
+    "react/prop-types": [0],
+    "react/destructuring-assignment": [0, "always"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] 
+  }
+}

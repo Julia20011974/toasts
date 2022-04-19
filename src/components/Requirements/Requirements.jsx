@@ -1,5 +1,5 @@
-import React from "react"
+import React from 'react';
 
-export const Requirements = () => {
-  return (<>Hello World</>)
+export function Requirements() {
+  return <>Hello World</>;
 }

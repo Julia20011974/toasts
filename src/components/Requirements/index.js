@@ -1,1 +1,1 @@
-export * from './Requirements.jsx'
+export * from './Requirements.jsx';
