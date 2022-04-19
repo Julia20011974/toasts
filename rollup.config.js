@@ -38,6 +38,10 @@ export default [
             replacement: path.resolve(projectRootDir, './src/stories')
           },
           {
+            find: '@/images',
+            replacement: path.resolve(projectRootDir, './src/assets/images')
+          },
+          {
             find: '@/assets',
             replacement: path.resolve(projectRootDir, './src/assets')
           }
@@ -54,7 +58,8 @@ export default [
       }),
       terser(),
       image({
-        limit: 10000
+        limit: 10000,
+        exclude: 'node_modules/**'
       })
     ],
     external: ['styled-components']
