@@ -31,6 +31,14 @@ export default [
           {
             find: '@/components',
             replacement: path.resolve(projectRootDir, './src/components')
+          },
+          {
+            find: '@/stries',
+            replacement: path.resolve(projectRootDir, './src/stries')
+          },
+          {
+            find: '@/assets',
+            replacement: path.resolve(projectRootDir, './src/assets')
           }
         ],
         customResolver
