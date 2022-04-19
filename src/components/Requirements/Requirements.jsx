@@ -1,5 +1,5 @@
 import React from 'react';
 
 export function Requirements() {
-  return <>Hello World</>;
+  return <div>Hello World</div>;
 }
