@@ -1,6 +1,6 @@
 {
   "name": "cathere-toast",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "toast lib",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
