@@ -52,6 +52,7 @@ export default [
         extensions: ['.js', '.jsx']
       }),
       terser()
-    ]
+    ],
+    external: ['styled-components']
   }
 ];

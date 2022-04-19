@@ -1,5 +1,6 @@
 import React from 'react';
+import { Button } from './style';
 
 export function Requirements() {
-  return <div>Hello World</div>;
+  return <Button>Hello World</Button>;
 }
