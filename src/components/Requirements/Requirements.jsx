@@ -1,7 +1,7 @@
 import React from 'react';
-import error from '../../assets/images/error.svg';
+import success from '../../assets/images/success.svg';
 
 export function Requirements() {
   // eslint-disable-next-line jsx-a11y/alt-text
-  return <img src={error} />;
+  return <img src={success} />;
 }
