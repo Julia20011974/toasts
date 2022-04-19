@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button } from './style';
+import error from '../../assets/images/error.svg';
 
 export function Requirements() {
-  return <Button>Hello World</Button>;
+  // eslint-disable-next-line jsx-a11y/alt-text
+  return <img src={error} />;
 }

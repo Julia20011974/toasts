@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import alias from '@rollup/plugin-alias';
-import image from '@rollup/plugin-image';
+import image from 'rollup-plugin-img';
 
 const path = require('path');
 
@@ -53,7 +53,9 @@ export default [
         extensions: ['.js', '.jsx']
       }),
       terser(),
-      image()
+      image({
+        limit: 10000
+      })
     ],
     external: ['styled-components']
   }
