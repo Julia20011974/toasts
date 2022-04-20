@@ -14,7 +14,7 @@ const customResolver = resolve({
 
 export default [
   {
-    input: './src/index.js',
+    input: './src/index.jsx',
     output: [
       {
         file: 'dist/index.js',
@@ -27,6 +27,13 @@ export default [
       }
     ],
     plugins: [
+      resolve({
+        extensions: ['.js', '.jsx']
+      }),
+      babel({
+        exclude: 'node_modules/**',
+        presets: ['@babel/preset-react']
+      }),
       alias({
         entries: [
           {
@@ -42,20 +49,13 @@ export default [
             replacement: path.resolve(projectRootDir, './src/assets/images')
           },
           {
-            find: '@/assets',
-            replacement: path.resolve(projectRootDir, './src/assets')
+            find: '@/containers',
+            replacement: path.resolve(projectRootDir, './src/containers')
           }
         ],
         customResolver
       }),
-      babel({
-        exclude: 'node_modules/**',
-        presets: ['@babel/preset-react']
-      }),
       external(),
-      resolve({
-        extensions: ['.js', '.jsx']
-      }),
       terser(),
       image({
         limit: 10000,
