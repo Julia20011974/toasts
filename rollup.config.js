@@ -38,8 +38,24 @@ export default [
             replacement: path.resolve(projectRootDir, './src/stories')
           },
           {
-            find: '@/assets',
-            replacement: path.resolve(projectRootDir, './src/assets')
+            find: '@/images',
+            replacement: path.resolve(projectRootDir, './src/assets/images')
+          },
+          {
+            find: '@/helpers',
+            replacement: path.resolve(projectRootDir, './src/helpers')
+          },
+          {
+            find: '@/hooks',
+            replacement: path.resolve(projectRootDir, './src/hooks')
+          },
+          {
+            find: '@/constants',
+            replacement: path.resolve(projectRootDir, './src/constants')
+          },
+          {
+            find: '@/containers',
+            replacement: path.resolve(projectRootDir, './src/containers')
           }
         ],
         customResolver
