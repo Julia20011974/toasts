@@ -16,8 +16,9 @@ export const ToastPortal = React.forwardRef(({ location }, ref) => {
   useAutoCloseToast(toasts, remove);
 
   useImperativeHandle(ref, () => ({
-    add: (prop) => {
-      if (toasts.length !== 3) setToasts(service.addToast(prop));
+    add: () => {
+      console.log('add');
+      // if (toasts.length !== 3) setToasts(service.addToast(prop));
     }
   }));
 
