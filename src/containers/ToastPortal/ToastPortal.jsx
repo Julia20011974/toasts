@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useImperativeHandle, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { useToastPortal, useAutoCloseToast } from '@/hooks';
+import { useToastPortal } from '@/hooks';
 import { Toast } from '@/components/Toast';
-import { service } from '@/services/ToastService';
+// import { service } from '@/services/ToastService';
 
 export const ToastPortal = React.forwardRef(({ location }, ref) => {
-  const [toasts, setToasts] = useState([]);
+  const [toasts] = useState([]);
   const { loaded, portalId } = useToastPortal(location);
 
-  function remove(id) {
+  /* function remove(id) {
     return () => setToasts(service.removeToast(id));
-  }
+  } */
 
-  useAutoCloseToast(toasts, remove);
+  // useAutoCloseToast(toasts, remove);
 
   useImperativeHandle(ref, () => ({
     add: () => {
@@ -26,7 +26,7 @@ export const ToastPortal = React.forwardRef(({ location }, ref) => {
     ? ReactDOM.createPortal(
         <div>
           {toasts.map((t) => (
-            <Toast key={t.id} {...t} onClose={remove(t.id)} />
+            <Toast {...t} />
           ))}
         </div>,
         document.getElementById(portalId)
