@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './style';
 
-export function CloseButton() {
-  return <Button>X</Button>;
+export function CloseButton({ bg, label }) {
+  return <Button bg={bg}>{label}</Button>;
 }
