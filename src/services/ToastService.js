@@ -3,7 +3,7 @@
 export class ToastService {
   constructor() {
     this.instance = null;
-    this.id = 0;
+    this.idishka = 0;
     this.toasts = [];
 
     if (this.instance) {
@@ -17,8 +17,8 @@ export class ToastService {
   }
 
   addToast(prop) {
-    this.id++;
-    this.toasts = [...this.toasts, { ...prop, id: this.id }];
+    this.idishka++;
+    this.toasts = [...this.toasts, { ...prop, id: this.idishka }];
     return this.toasts;
   }
 
