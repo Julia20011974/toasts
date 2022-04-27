@@ -28,4 +28,4 @@ export class ToastService {
   }
 }
 
-export const service = Object.freeze(new ToastService());
+export const service = new ToastService();
