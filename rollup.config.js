@@ -56,6 +56,10 @@ export default [
           {
             find: '@/containers',
             replacement: path.resolve(projectRootDir, './src/containers')
+          },
+          {
+            find: '@/services',
+            replacement: path.resolve(projectRootDir, './src/services')
           }
         ],
         customResolver
