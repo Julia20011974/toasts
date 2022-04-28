@@ -73,9 +73,7 @@ export default [
         extensions: ['.js', '.jsx']
       }),
       terser(),
-      image({
-        limit: 10000
-      })
+      image()
     ],
     external: ['styled-components']
   }
