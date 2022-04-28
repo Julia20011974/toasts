@@ -23,6 +23,7 @@ export const useToastPortal = (position) => {
 
   useEffect(() => {
     const div = document.createElement('div');
+    console.log('this id');
     div.id = portalId;
     div.style = `position: fixed; ${getPosition()}`;
     document.getElementsByTagName('body')[0].prepend(div);

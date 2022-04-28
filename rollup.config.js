@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
-import { terser } from 'rollup-plugin-terser';
+// import { terser } from 'rollup-plugin-terser';
 import alias from '@rollup/plugin-alias';
 import image from 'rollup-plugin-img';
 
@@ -72,7 +72,6 @@ export default [
       resolve({
         extensions: ['.js', '.jsx']
       }),
-      terser(),
       image({
         limit: 10000
       })

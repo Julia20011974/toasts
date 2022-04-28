@@ -1,11 +1,13 @@
+/* eslint-disable strict */
 /* eslint-disable react/jsx-props-no-spreading */
+
+'use strict';
+
 import React, { useImperativeHandle, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useToastPortal } from '../../hooks';
 import { Toast } from '../../components/Toast';
-import { ToastService } from '../../services/ToastService';
-
-const service = ToastService.getInstance();
+import { service } from '../../services/ToastService';
 
 export const ToastPortal = React.forwardRef(({ location }, ref) => {
   const [toasts, setToasts] = useState([]);
