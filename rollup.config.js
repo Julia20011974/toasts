@@ -14,7 +14,7 @@ const customResolver = resolve({
 
 export default [
   {
-    input: './src/index.jsx',
+    input: './src/index.js',
     output: [
       {
         file: 'dist/index.js',
