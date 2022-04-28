@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import alias from '@rollup/plugin-alias';
-import image from 'rollup-plugin-img';
+import image from '@rollup/plugin-image';
 
 const path = require('path');
 
@@ -39,7 +39,7 @@ export default [
           },
           {
             find: '@/images',
-            replacement: path.resolve(projectRootDir, './src/assets/images')
+            replacement: path.resolve(projectRootDir, './src/images')
           },
           {
             find: '@/helpers',
