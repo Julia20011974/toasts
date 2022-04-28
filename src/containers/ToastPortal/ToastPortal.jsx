@@ -13,6 +13,7 @@ export const ToastPortal = React.forwardRef(({ location }, ref) => {
   function remove(id) {
     return () => setToasts(service.removeToast(id));
   }
+
   useAutoCloseToast(toasts, remove);
 
   useImperativeHandle(ref, () => ({
