@@ -5,9 +5,9 @@
 
 import React, { useImperativeHandle, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { useToastPortal } from '../../hooks';
-import { Toast } from '../../components/Toast';
-import { service } from '../../services/ToastService';
+import { useToastPortal } from '@/hooks';
+import { Toast } from '@/components/Toast';
+import { service } from '@/services';
 
 export const ToastPortal = React.forwardRef(({ location }, ref) => {
   const [toasts, setToasts] = useState([]);
@@ -15,8 +15,8 @@ export const ToastPortal = React.forwardRef(({ location }, ref) => {
 
   /* function remove(id) {
     return () => setToasts(service.removeToast(id));
-  } */
-  // useAutoCloseToast(toasts, remove);
+  }
+  useAutoCloseToast(toasts, remove); */
 
   useImperativeHandle(ref, () => ({
     add: (prop) => {
