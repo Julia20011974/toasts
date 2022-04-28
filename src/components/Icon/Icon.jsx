@@ -1,8 +1,7 @@
 import React from 'react';
 import { Image } from './style';
-import success from '@/images/success.svg';
+import { getImage } from '@/helpers/getImage';
 
-// eslint-disable-next-line no-unused-vars
-export function Icon({ picture }) {
-  return <Image src={success} />;
+export function Icon({ img }) {
+  return <Image src={getImage(img)} />;
 }

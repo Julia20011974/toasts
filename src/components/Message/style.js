@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
 export const Text = styled.div`
-  width: 100%;
+  color: ${(props) => props.color};
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
 `;

@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import alias from '@rollup/plugin-alias';
-import image from 'rollup-plugin-img';
+import image from '@rollup/plugin-image';
 
 const path = require('path');
 
@@ -46,21 +46,34 @@ export default [
           },
           {
             find: '@/images',
-            replacement: path.resolve(projectRootDir, './src/assets/images')
+            replacement: path.resolve(projectRootDir, './src/images')
+          },
+          {
+            find: '@/helpers',
+            replacement: path.resolve(projectRootDir, './src/helpers')
+          },
+          {
+            find: '@/hooks',
+            replacement: path.resolve(projectRootDir, './src/hooks')
+          },
+          {
+            find: '@/constants',
+            replacement: path.resolve(projectRootDir, './src/constants')
           },
           {
             find: '@/containers',
             replacement: path.resolve(projectRootDir, './src/containers')
+          },
+          {
+            find: '@/services',
+            replacement: path.resolve(projectRootDir, './src/services')
           }
         ],
         customResolver
       }),
       external(),
       terser(),
-      image({
-        limit: 10000,
-        exclude: 'node_modules/**'
-      })
+      image()
     ],
     external: ['styled-components']
   }
