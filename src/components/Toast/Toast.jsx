@@ -21,7 +21,7 @@ export function Toast({ bg, color, img, msg, time, margin, animation, onClose })
 
 Toast.defaultProps = {
   bg: '#9933CC',
-  color: 'black',
+  color: 'white',
   img: 'info',
   msg: 'info toast example',
   time: DELAY,

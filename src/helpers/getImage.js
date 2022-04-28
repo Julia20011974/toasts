@@ -6,6 +6,7 @@ import error from '@/images/error.svg';
 export function getImage(img) {
   switch (img) {
     case 'info': {
+      console.log('question');
       return question;
     }
     case 'success': {

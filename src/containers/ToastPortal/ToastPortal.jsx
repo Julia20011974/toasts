@@ -25,7 +25,7 @@ export const ToastPortal = React.forwardRef(({ location }, ref) => {
     ? ReactDOM.createPortal(
         <div>
           {toasts.map((t) => (
-            <Toast key={t.id} {...t} />
+            <Toast key={t.id} {...t} onClose={remove(t.id)} />
           ))}
         </div>,
         document.getElementById(portalId)
