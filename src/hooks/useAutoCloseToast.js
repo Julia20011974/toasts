@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import { DELAY } from '@/constants';
 
 export const useAutoCloseToast = (toasts, remove) => {
