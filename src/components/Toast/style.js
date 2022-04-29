@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-const cout = keyframes`
+const reversal = keyframes`
 0%{
   transform: rotateY(180deg);
 }
@@ -23,7 +23,7 @@ export const ToastWrapper = styled.div`
   border-radius: 10px;
   width: 300px;
   padding: 10px;
-  animation: ${(props) => (props.animation === 'zoom' ? zoom : cout)} 0.1s linear forwards;
+  animation: ${(props) => (props.animation === 'zoom' ? zoom : reversal)} 0.1s linear forwards;
 `;
 
 export const ContentWrapper = styled.div`
