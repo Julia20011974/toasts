@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
 import React, { useImperativeHandle, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useToastPortal, useAutoCloseToast } from '@/hooks/';

@@ -1,5 +1,3 @@
-/* eslint-disable no-plusplus */
-
 export class ToastService {
   constructor() {
     this.instance = null;
@@ -29,3 +27,4 @@ export class ToastService {
 }
 
 export const service = new ToastService();
+Object.freeze(service);

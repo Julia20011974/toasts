@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPosition } from '@/helpers/getPosition';
+import { getPosition } from '@/helpers';
 
 export const useToastPortal = (position) => {
   const [loaded, setLoaded] = useState(false);

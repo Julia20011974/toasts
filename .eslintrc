@@ -17,6 +17,8 @@
     "import/extensions":[0, "never"],
     "react/prop-types": [0],
     "react/destructuring-assignment": [0, "always"],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] 
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/jsx-props-no-spreading": "off",
+    "no-plusplus":"off"
   }
 }
