@@ -27,4 +27,3 @@ export class ToastService {
 }
 
 export const service = new ToastService();
-Object.freeze(service);
