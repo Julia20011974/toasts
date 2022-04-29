@@ -6,7 +6,6 @@ export const useToastPortal = (position) => {
   const [portalId] = useState(`toast-portal`);
 
   useEffect(() => {
-    console.log('position');
     const div = document.createElement('div');
     div.id = portalId;
     div.style = `position: fixed; ${getPosition(position)}`;
@@ -15,7 +14,7 @@ export const useToastPortal = (position) => {
     setLoaded(true);
 
     return () => document.getElementsByTagName('body')[0].removeChild(div);
-  }, [portalId, getPosition]);
+  }, [portalId, position]);
 
   return {
     loaded,
