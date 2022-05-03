@@ -57,14 +57,14 @@ $ yarn add cathere-toast
       time: 5000,
       margin: '10px',
       animation: 'zoom',
-      color:'white' )}
+      color:'white' })
    }
   
   return (
       <div>
         <button onClick={showInfo}>Info</button>
         <button onClick={showSuccess}>Succes</button>
-        <ToastPortal position='top-right' />
+        <ToastPortal ref={toastRef} position='top-right' />
       </div>
     );
   }
