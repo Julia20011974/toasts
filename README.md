@@ -57,7 +57,7 @@ $ yarn add cathere-toast
       time: 5000,
       margin: '10px',
       animation: 'zoom',
-      color:'white' )}
+      color:'white' })
    }
   
   return (
