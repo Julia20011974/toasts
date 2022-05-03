@@ -64,7 +64,7 @@ $ yarn add cathere-toast
       <div>
         <button onClick={showInfo}>Info</button>
         <button onClick={showSuccess}>Succes</button>
-        <ToastPortal location='top-right' />
+        <ToastPortal ref={toastRef} location='top-right' />
       </div>
     );
   }
