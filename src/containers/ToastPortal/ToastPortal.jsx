@@ -4,9 +4,9 @@ import { useToastPortal, useAutoCloseToast } from '@/hooks/';
 import { Toast } from '@/components/Toast';
 import { service } from '@/services';
 
-export const ToastPortal = React.forwardRef(({ location }, ref) => {
+export const ToastPortal = React.forwardRef(({ position }, ref) => {
   const [toasts, setToasts] = useState([]);
-  const { loaded, portalId } = useToastPortal(location);
+  const { loaded, portalId } = useToastPortal(position);
 
   function remove(id) {
     return () => setToasts(service.removeToast(id));
@@ -31,3 +31,7 @@ export const ToastPortal = React.forwardRef(({ location }, ref) => {
       )
     : null;
 });
+
+ToastPortal.defaultProps = {
+  position: 'top-right'
+};

@@ -12,7 +12,7 @@ $ yarn add cathere-toast
 ## Features
 - You can create toast with default params
 - Yo can create toast with params
-  - bg 
+  - backgroundColor 
   - img 
     - info ( default )
     - success
@@ -25,7 +25,7 @@ $ yarn add cathere-toast
     - zoom ( default )
     - reversal 
   - color
-  - location
+  - position
     - top-right (default)
     - top-center
     - top-left
@@ -51,7 +51,7 @@ $ yarn add cathere-toast
    
    const showSuccess = () => {
      toastRef.current.add({ 
-      bg:'#99FFCC',
+      backgroundColor:'#99FFCC',
       img:'success',
       msg: "Success toast example",
       time: 5000,
@@ -64,7 +64,7 @@ $ yarn add cathere-toast
       <div>
         <button onClick={showInfo}>Info</button>
         <button onClick={showSuccess}>Succes</button>
-        <ToastPortal location='top-right' />
+        <ToastPortal position='top-right' />
       </div>
     );
   }

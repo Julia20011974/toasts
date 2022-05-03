@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.[hash].js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, './build')
   },
   resolve: {
     modules: [__dirname, 'src', 'node_modules'],
@@ -29,5 +29,6 @@ module.exports = {
         use: ['file-loader']
       }
     ]
-  }
+  },
+  mode: 'development'
 };

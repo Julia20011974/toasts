@@ -1,29 +1,13 @@
-import styled, { keyframes } from 'styled-components';
-
-const reversal = keyframes`
-0%{
-  transform: rotateY(180deg);
-}
-100%{
-  transform: rotateY(360deg);
-}
-`;
-const zoom = keyframes`
-0%{
-  transform:scale(0.5)  
-}
-100%{
-  transform:scale(1) 
-}
-`;
+import styled from 'styled-components';
+import { getAnimation } from '@/helpers/getAnimation';
 
 export const ToastWrapper = styled.div`
   margin: ${(props) => props.margin} 0;
-  background-color: ${(props) => props.bg};
+  background-color: ${(props) => props.backgroundColor};
   border-radius: 10px;
   width: 300px;
   padding: 10px;
-  animation: ${(props) => (props.animation === 'zoom' ? zoom : reversal)} 0.1s linear forwards;
+  animation: ${(props) => getAnimation(props.animation)} 0.1s linear forwards;
 `;
 
 export const ContentWrapper = styled.div`

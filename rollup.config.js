@@ -41,10 +41,6 @@ export default [
             replacement: path.resolve(projectRootDir, './src/components')
           },
           {
-            find: '@/stories',
-            replacement: path.resolve(projectRootDir, './src/stories')
-          },
-          {
             find: '@/images',
             replacement: path.resolve(projectRootDir, './src/images')
           },

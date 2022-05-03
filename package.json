@@ -26,6 +26,8 @@
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
+    "@storybook/builder-webpack5": "^6.4.22",
+    "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.9",
     "babel-eslint": "^10.1.0",
@@ -38,6 +40,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "pre-commit": "^1.2.2",
+    "prettier": "^2.6.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.70.2",
@@ -57,7 +60,9 @@
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^21.1.0",
     "eslint-plugin-import": "^2.26.0",
+    "react-is": "^18.1.0",
     "styled-components": "^5.3.5",
-    "webpack": "^5.72.0"
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }
