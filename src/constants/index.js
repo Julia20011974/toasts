@@ -4,7 +4,6 @@ import warning from '@/images/warning.svg';
 import error from '@/images/error.svg';
 import { reversal, zoom } from './animations';
 
-export const DELAY = 1000;
 export const positions = new Map([
   ['top-right', 'top: 30px; right: 10px'],
   ['top-left', 'top: 30px; left: 10px'],
@@ -23,3 +22,8 @@ export const animations = new Map([
   ['zoom', zoom],
   ['reversel', reversal]
 ]);
+
+export const DELAY = 1000;
+export const DEFAULT_POSITION = positions.get('top-right');
+export const DEFAULT_IMAGES = images.get('info');
+export const DEFAULT_ANIMATIONS = animations.get('zoom');

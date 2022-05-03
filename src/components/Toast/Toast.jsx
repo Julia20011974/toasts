@@ -1,5 +1,5 @@
 import React from 'react';
-import { DELAY } from '@/constants';
+import { DELAY, DEFAULT_IMAGES, DEFAULT_ANIMATIONS } from '@/constants';
 import { Message } from '@/components/Message';
 import { ToastWrapper, ContentWrapper } from './style';
 import { CloseButton } from '@/components/CloseButton';
@@ -22,9 +22,9 @@ export function Toast({ backgroundColor, color, img, msg, time, margin, animatio
 Toast.defaultProps = {
   backgroundColor: '#9933CC',
   color: 'white',
-  img: 'info',
+  img: DEFAULT_IMAGES,
   msg: 'info toast example',
   time: DELAY,
   margin: '10px',
-  animation: 'zoom'
+  animation: DEFAULT_ANIMATIONS
 };

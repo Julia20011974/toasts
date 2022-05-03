@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { useToastPortal, useAutoCloseToast } from '@/hooks/';
 import { Toast } from '@/components/Toast';
 import { service } from '@/services';
+import { DEFAULT_POSITION } from '@/constants';
 
 export const ToastPortal = React.forwardRef(({ position }, ref) => {
   const [toasts, setToasts] = useState([]);
@@ -33,5 +34,5 @@ export const ToastPortal = React.forwardRef(({ position }, ref) => {
 });
 
 ToastPortal.defaultProps = {
-  position: 'top-right'
+  position: DEFAULT_POSITION
 };

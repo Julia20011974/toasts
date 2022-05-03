@@ -1,5 +1,5 @@
-import { images } from '@/constants';
+import { images, DEFAULT_IMAGES } from '@/constants';
 
 export function getImage(img) {
-  return images.get(img);
+  return images.has(img) ? images.get(img) : DEFAULT_IMAGES;
 }
